@@ -111,9 +111,11 @@ class BridgeDSPPeripheral(PassthroughPeripheral):
             # firmware advanced its read index; nothing to do yet
             self.ring_tail = value & 0xFFFF
             return True
-        # TODO: decode ARM->DSP commands written into the shared struct here
-        # (the ~3KB region memset at boot). This is where a Shannon GSM DSP
-        # command would be recognised and forwarded to the C54x backend.
+        # ARM->DSP commands written into the shared struct (the ~3KB region
+        # memset at boot) are decoded by dsp_xlate when DSP_XLATE=1: Shannon
+        # write -> neutral Order -> C54x task -> Result -> post_result().
+        if self.xlate is not None:
+            self.xlate.on_arm_write(offset, size, value)
         self.log_write(value, size, "DSP_WR_off_%x" % offset)
         return True
 
@@ -139,6 +141,12 @@ class BridgeDSPPeripheral(PassthroughPeripheral):
         self.ring = [0] * self.ring_len
         self.ring_head = 0
         self.ring_tail = 0
+
+        # Opt-in Shannon <-> C54x order translation (see dsp_xlate.py).
+        self.xlate = None
+        if os.environ.get("DSP_XLATE") == "1":
+            from .dsp_xlate import Translator
+            self.xlate = Translator.from_env(self.post_result)
 
         self.backend = C54xBackend(
             os.environ.get("CALYPSO_DSP_SOCK", "/tmp/calypso_dsp.sock")
