@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "note": "Shannon DSP command table for dsp_xlate.ShannonCodec. EMPTY on purpose: no GSM DSP command has been observed from the modem yet (it never leaves MM_NO_RAT_MODE). Run with DSP_XLATE=1, collect the 'UNMAPPED DSP write' log lines once 2G is driven, then add rules here. Rule: {offset, mask, value, order:{kind: FB|SB|CCCH|RACH|IDLE, params}, fn_mask, fn_shift}.",
+  "rules": []
+}
