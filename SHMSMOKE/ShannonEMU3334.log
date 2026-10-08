@@ -1,0 +1,15 @@
+2026-10-08 01:51:18,462 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.STOPPED
+2026-10-08 01:51:18,474 | avatar.targets.ShannonEMU3334.QMPProtocol.INFO | b'{"return": {}, "id": 0}\r\n'
+2026-10-08 01:51:18,475 | avatar.targets.ShannonEMU3334.INFO | Connected to remote target
+2026-10-08 01:51:18,475 | avatar.targets.ShannonEMU3334.RemoteMemoryProtocol.INFO | Successfully connected rmp
+2026-10-08 01:51:18,492 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.EXITED
+2026-10-08 01:51:19,975 | avatar.targets.ShannonEMU3334.RemoteMemoryProtocol.WARN | Tried to close/unlink non existent rx_queue
+2026-10-08 01:51:19,976 | avatar.targets.ShannonEMU3334.RemoteMemoryProtocol.WARN | Tried to close/unlink non existent tx_queue
+2026-10-08 01:52:33,764 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.STOPPED
+2026-10-08 01:52:33,777 | avatar.targets.ShannonEMU3334.QMPProtocol.INFO | b'{"return": {}, "id": 0}\r\n'
+2026-10-08 01:52:33,778 | avatar.targets.ShannonEMU3334.INFO | Connected to remote target
+2026-10-08 01:52:33,778 | avatar.targets.ShannonEMU3334.RemoteMemoryProtocol.INFO | Successfully connected rmp
+2026-10-08 01:52:33,855 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.RUNNING
+2026-10-08 01:53:02,809 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.BREAKPOINT
+2026-10-08 01:53:02,810 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.STOPPED
+2026-10-08 01:53:02,850 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.RUNNING

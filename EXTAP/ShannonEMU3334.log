@@ -1,0 +1,5 @@
+2026-10-08 02:00:28,380 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.STOPPED
+2026-10-08 02:00:28,394 | avatar.targets.ShannonEMU3334.QMPProtocol.INFO | b'{"return": {}, "id": 0}\r\n'
+2026-10-08 02:00:28,395 | avatar.targets.ShannonEMU3334.INFO | Connected to remote target
+2026-10-08 02:00:28,395 | avatar.targets.ShannonEMU3334.RemoteMemoryProtocol.INFO | Successfully connected rmp
+2026-10-08 02:00:28,461 | avatar.targets.ShannonEMU3334.INFO | State changed to TargetStates.RUNNING
